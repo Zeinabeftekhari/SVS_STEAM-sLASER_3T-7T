@@ -1,11 +1,29 @@
+#20240822
+#ZE and TBS - CV calculation for metabolites
+# This script processes metabolite data to remove outliers and calculate the coefficient of variation (CV)
+# for different combinations of experimental variables (metabolites, sequences, fields, and locations).
+# The CV is a measure of relative variability, calculated as the ratio of the standard deviation to the mean, 
+# expressed as a percentage. The script follows these main steps:
+# 
+# 1. Load the necessary libraries for data manipulation.
+# 2. Define the file paths for the input and output CSV files.
+# 3. Read the input CSV file and filter out rows where the CRLB (Cramér-Rao Lower Bound) exceeds 50.
+# 4. Write the filtered data to a new CSV file.
+# 5. Load the filtered data and extract relevant columns.
+# 6. Identify unique metabolites, sequences, fields, locations, and subjects present in the dataset.
+# 7. Calculate the CV for each subject based on the different combinations of metabolite, sequence, field, and location,
+#    and store these values in a 'subject CV' table.
+# 8. Calculate the mean CV across all subjects for each combination of experimental variables and store these in a 'mean CV' table.
+# 9. Save the 'subject CV' table and the 'mean CV' table as separate CSV files.
+
 # Load necessary libraries
 library(dplyr)
 library(tidyr)
 
 
 # Define the path to the input and output files
-input_file <- "C:/Users/uqzeftek/Desktop/CSV_wide/long_format.csv"
-output_file <- "C:/Users/uqzeftek/Desktop/CSV_wide/long_format_outlier_removed.csv"
+input_file <- ""
+output_file <- ""
 
 # Read the input CSV file
 data_outlier <- read.csv(input_file)
@@ -19,7 +37,7 @@ write.csv(filtered_data, output_file, row.names = FALSE)
 
 
 # Load outlier removed data from the CSV file to calcualte subject CV and mean CV
-data <- read.csv("C:/Users/uqzeftek/Desktop/CSV_wide/long_format_outlier_removed.csv")
+data <- read.csv("")
 
 # Extract relevant columns
 sequence <- data$sequence
@@ -113,7 +131,7 @@ for (met in unique_metabolites) {
 }
 
 # Save the subject CV table to a CSV file
-write.csv(subject_CV_table, "C:/Users/uqzeftek/Desktop/CSV_wide/subject_CV.csv", row.names = FALSE)
+write.csv(subject_CV_table, "/path/to/file", row.names = FALSE)
 
 # Save the mean CV table to a CSV file
-write.csv(mean_CV_table, "C:/Users/uqzeftek/Desktop/CSV_wide/final_CV.csv", row.names = FALSE)
+write.csv(mean_CV_table, "/path/to/file", row.names = FALSE)

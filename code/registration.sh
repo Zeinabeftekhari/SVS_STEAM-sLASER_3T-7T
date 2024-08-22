@@ -1,8 +1,9 @@
 #!/bin/bash
 #22/06/2024
-#Zeinab Eftekhari and Dr. Thomsa Shaw
+#Zeinab Eftekhari and Dr. Thomas Shaw
 
-# register the second time point scout to first time point T1W, thne move th emask to the same space for calcualting dice overlap
+# register the second time point scout to first time point T1W, thne move the mask to the same space for calcualting dice overlap
+
 ml ants
 eval-seg-path=/path/to/EvaluateSegmentation
 mask_path="/path/to/steam_slaser_3t_7t/dice_overlap"

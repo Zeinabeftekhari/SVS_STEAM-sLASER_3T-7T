@@ -20,6 +20,9 @@ This repository contains a set of R and bash scripts designed to process, transf
 6) Figure_5.py: ICC and CV Heatmaps
     - The Figure 5 script generates heatmaps to visualize the Intraclass Correlation Coefficient (ICC) and Coefficient of Variation (CV) for the same MRI sequences and field strengths. It reads data from a CSV file, applies custom colormaps, and
       produces a series of heatmaps that compare ICC and CV values across various metabolites and voxel locations. This visualization aids in understanding the reliability and variability of the data.
+7) ICC.R:
+    -  This R script calculates the Intraclass Correlation Coefficient (ICC) for metabolite concentrations across different MRI sequences, field strengths, and voxel locations. The script reads data from a CSV file, processes it by looping through
+       unique combinations of parameters, and calculates the ICC for each combination using a two-way agreement model using "irr" package. The results are stored in a list, converted into a data frame, and then saved as a CSV file for further analysis.
 
 ## Usage
 

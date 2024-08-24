@@ -1,6 +1,18 @@
 #22/1/2024
 #Zeinab Eftekhari and Dr. Thomas Shaw
 
+# This R script creates scatterplots to visualize metabolite concentrations across different MRI sequences 
+# (sLASER and STEAM) and field strengths (3T and 7T). It reads data from a CSV file, filters it, and generates 
+# four plots that compare concentrations between the sequences and field strengths. The plots are combined 
+# into a single figure for easy comparison.
+#
+# Libraries used:
+# - ggplot2: For plotting.
+# - dplyr: For data filtering.
+# - patchwork: For combining plots.
+#
+# Note: Replace "path/to/csv" with the path to your CSV file.
+
 # Load the required library
 library(ggplot2)
 

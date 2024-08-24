@@ -14,6 +14,12 @@ This repository contains a set of R and bash scripts designed to process, transf
     - This script transforms wide format CSV files into long format. It identifies the appropriate column names based on file patterns, reshapes the data, and saves the long format files. It also includes functionality to combine these long format files into a single dataset.
 4) registration.sh: 
     - A shell script included for registering or organizing the second session GM and WM segmentations together 
+5) Figure_4.R: Metabolite Concentrations
+    - The R script for Figure 4 creates detailed scatterplots to compare metabolite concentrations across two MRI sequences (sLASER and STEAM) at two different field strengths (3T and 7T). The script reads data from a CSV file, filters it accordingly,
+      and generates four distinct plots. These plots are then combined into a single figure to facilitate easy comparison between the different sequences and field strengths.
+6) Figure_5.py: ICC and CV Heatmaps
+    - The Figure 5 script generates heatmaps to visualize the Intraclass Correlation Coefficient (ICC) and Coefficient of Variation (CV) for the same MRI sequences and field strengths. It reads data from a CSV file, applies custom colormaps, and
+      produces a series of heatmaps that compare ICC and CV values across various metabolites and voxel locations. This visualization aids in understanding the reliability and variability of the data.
 
 ## Usage
 

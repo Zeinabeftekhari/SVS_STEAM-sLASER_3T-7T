@@ -23,6 +23,8 @@ This repository contains a set of R and bash scripts designed to process, transf
 7) ICC.R:
     -  This R script calculates the Intraclass Correlation Coefficient (ICC) for metabolite concentrations across different MRI sequences, field strengths, and voxel locations. The script reads data from a CSV file, processes it by looping through
        unique combinations of parameters, and calculates the ICC for each combination using a two-way agreement model using "irr" package. The results are stored in a list, converted into a data frame, and then saved as a CSV file for further analysis.
+## Data
+The dataset is stored and published in a long format. Metabolites with CRLB values greater than 50 have been removed, and the cleaned data is saved as long_format_outlier_removed.csv. The subject_cv represents the coefficient of variation (CV) for each subject, calculated from two sessions. The final_cv is the average CV for each combination of parameters across all subjects.     
 
 ## Usage
 

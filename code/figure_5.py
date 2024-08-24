@@ -2,6 +2,9 @@
 #Zeinab Eftekhari and Dr. Thomas Shaw
 #This is a script for showing ICC and CV as heatmap
 
+#This script generates heatmaps to visualize the Intraclass Correlation Coefficient (ICC) and Coefficient of Variation (CV) for different MRI sequences and field strengths.
+#It reads the data from a CSV file, applies custom colormaps, and creates a set of plots to compare ICC and CV values across various metabolites and voxel locations.
+
 
 import pandas as pd
 import seaborn as sns
